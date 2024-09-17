@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐱‍👤</title>
+</head>
+<body style="text-align: center;"></body>
+    <h1> remador🐱‍👤</h1>
+    <p> programador!</p>
+    <label for="nome">Digite seu nome:</label><br>
+    
+    <input id="nome" type="text"placeholder="Ex: Ygu du mal">
+     <button onclick="boasVindas()">Clique aqui</button><br><br>
+    <button onclick="parOuImpar()">Par ou Impar</button><br>
+    <button onclick= "volume()">Volume</button><br>
+    <button onclick= "pesca()">pesca</button><br>
+    <button onclick= "media()">media</button><br>
+    <button onclick= "pagCalMed()">media system</button><br>
+    <button  onclick= "calculartemperatura()">calcule a temperatura</button><br>
+    <script>
+        function boasVindas(){
+            let nome = document.getElementById("nome").value;
+            let ano = prompt("Bem vindo, "+nome+"! Digite seu ano de nascimento!")
+            if(2024 - ano>17){
+                alert ("Portanto você é maior de idade, pois tens "+(2024-ano)+" anos");
+            }
+            else{
+                alert ("Portanto você é menor de idade, pois tens "+(2024-ano)+" anos");
+            }
+        }
+            function parOuImpar(){
+                let n = prompt("Escreva um número!")
+                if (n % 2 ==0){
+                alert ("É par!")}
+            else {
+                alert ("É ímpar")
+            }
+        }
+            function volume(){
+            let altura = prompt ("informe a altura desejada")
+            let comprimento = prompt("informe o comprimento desejado")
+            let largura = ("informe a largura desejada")
+            let volume = altura*comprimento*largura
+            alert("portanto o volume do movél é: "+volume)
+            }
+
+
+            function media(){
+              let n1 =Number (prompt("de o valor do n1"))
+              let n2 = Number  (prompt("de o valor do n2"))
+              let media = (n1+n2) /2;
+              alert("portanto sua media é:"+media)
+            }
+            
+            function pesca(){
+            let pesopermitido = prompt("digite o peso permitido");
+            let qntdpescado = prompt("digite a quantidade pescando");
+            let multapeso = prompt("digite o valor da multa por kg a mais");
+            if(qntdpescado> pesopermitido){
+              let diferenca = qntdpescado- pesopermitido
+              let multa = diferenca*multapeso
+              alert("o peso execedeu em "+diferenca+"kg,portanto deverá pagar a multa de r$"+multa)
+            }else{
+                alert("voce esta tudo certo pode passar")
+            }
+            function conversao(){
+                let n= prompt("Que conversão deseja fazer? \n Digite 1 para: Celsius para Fahrenheit \n Digite 2 para: Fahrenheit para Celsius \n Digite 3 para: Celsius para Kelvin \n Digite 4 para: Kelvin para Celsius \n Digite 5 para: Fahrenheit para Kelvin \n Digite 6 para: Kelvin para Fahrenheit")
+                if (n==1){
+                let t= Number(prompt("Digite a temperatura em Celsius"))
+                let r= (t*1.8)+32
+                alert ("Sua temperatura em Fahrenheit é: "+r)
+                }
+                else if (n==2) {
+                let t= Number(prompt("Digite a temperatura em Fahrenheit"))
+                let r= (t-32)*(5/9)
+                alert ("Sua temperatura em Celsius é: "+r)
+                }
+                else if (n==3) {
+                let t= Number(prompt("Digite a temperatura em Celsius"))
+                let r= t+273.15
+                alert ("Sua temperatura em Kelvin é: "+r)
+                }
+                else if (n==4) {
+                let t= Number(prompt("Digite a temperatura em Kelvin"))
+                let r= t-273.15
+                alert ("Sua temperatura em Celsius é: "+r)
+                }
+                else if (n==5) {
+                let t= Number(prompt("Digite a temperatura em Fahrenheit"))
+                let r= ((t - 32) * (5/9)) + 273.15
+                alert ("Sua temperatura em Kelvin é: "+r)
+                }
+                else if (n==6) {
+                let t= Number(prompt("Digite a temperatura em Kelvin"))
+                let r= (t - 273.15) * (9/5) + 32
+                alert ("Sua temperatura em Fahrenheit é: "+r)
+
+                
+                }
+            
+            }
+        }
+
+        function calculartemperatura(){
+                 let n = prompt("que conversão deseja fazer?\n digite 1 parta: celsius para fahrenheit\n digite 2 para:fahrenheit para celsius")
+                    if(n == 1){
+                    let t = prompt("digite a temperatura em celsios")
+                    r =(t*1.8)+32
+                    alert("portanto sua temperatura convertida foi:"+r+"celsius")
+
+                  }
+                 else if(n ==2){
+                    let t = prompt("digite a temperatura em fahrenheit")
+                    r = (t-32)*(5/9)
+                    alert("portanto sua temperatura convertida em celcius " +r +"celsius")
+                 }
+
+
+
+                function pagcalmed(){
+                    
+
+                }
+
+                }
+            
+        function pagCalMed(){
+            window.location.href = "mediaSystem.html"
+        }
+
+
+
+    </script>
+</body>
+</html>
